@@ -1,5 +1,6 @@
 get '/' do 
   @urls = Url.all
+  # @count = Url.count
   erb :'home'
 end
 
@@ -7,11 +8,10 @@ post '/urls' do
  @url = Url.new(long_url: params[:long_url])
 
   if @url.save
-    return @url.to_json
+    redirect "/urls/#{@url.id}"
   else
     @urls = Url.all
     @failed = true
-
     erb :'home'
   end
 
@@ -23,13 +23,16 @@ get '/urls' do
 end
 
 
-get '/all-links' do
-  @links = Url.pluck(:id, :short_url, :long_url)
-  @links.to_json
+get '/urls/:id' do
+  @url = Url.find_by(id: params[:id])
+  @all_url = Url.all.order(click_count: :desc).limit(10)
+  erb :'show'
 end
 
 get '/:short_url' do 
   url = Url.find_by(short_url: params[:short_url])
-  url.count
+  # @url.count
   redirect "#{url.long_url}"
+
 end
+
