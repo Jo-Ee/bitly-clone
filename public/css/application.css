@@ -1,0 +1,37 @@
+body {
+  background-image: url(http://3.bp.blogspot.com/-f2XX6_CJNNc/VCaHU7fHwJI/AAAAAAAAGig/ORo4Kah5u-Q/s1600/simple-gray-texture.jpg);
+  background-color: #b0c4de;
+}
+
+h1 {
+  font-family: Century Gothic;
+  font-size: 50px;
+  font-weight: 1500;
+}
+
+p {
+  font-family: Century Gothic;
+  font-size: 20px;
+  font-style: italic;
+}
+
+table {
+  margin-top: 30px;
+  width: 55%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #2D251D;
+  color:#ffffff;
+}
+
+th {
+  padding: 4px;
+  font-size: 15px;
+  font-family: Liberation Sans;
+}
+
+td {
+  padding: 3px;
+  font-size: 12px;
+  font-style: italic;
+}

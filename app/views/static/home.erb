@@ -1,5 +1,5 @@
 <title>Shorty URL</title>
-<h1 align="center">Shorty URL</h1>
+<h1 align="center">Short-ly</h1>
 <p id="loading"></p>
 
 	<div class="banner b01 center">
@@ -16,9 +16,22 @@
   Please input a valid URL.
   <% end %>
 </div>
-<!-- <p align = "center"><%=@count%> links shortened!</p> -->
 
-    <tbody>
-    </tbody>
-  </table>
-</div>
+<div>
+<table id="datatable" align="center">
+  <tr>
+    <th align ="left"><%= "Long URL"%></th>
+    <th align ="left"><%= "Shorten URL"%></th>
+    <th align ="left"><%= "Click Count"%></th>
+  </tr>
+  <tr>
+  <% @all_url.each do |url| %>
+    <td align = "left"><%= url.long_url %></td>
+    <td align = "left"><%= url.short_url %></td>
+    <td align = "center"><%= url.click_count%></td>
+  </tr>
+     <% end %>
+ </table>
+ </div>
+
+ 
