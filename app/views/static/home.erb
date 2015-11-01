@@ -1,9 +1,10 @@
-<title>Shorty URL</title>
+<title>Short-ly</title>
 <h1 align="center">Short-ly</h1>
+
 <p id="loading"></p>
 
 	<div class="banner b01 center">
-	  <p id = "p01" align = "center">Enter your URL here to get started!</p>
+	  <p id = "p01" align = "center">Simplifying the web</p>
 		  <form action="/urls" method="post" style="text-align: center">
 			  <input id = "input" type ="text" name="long_url" placeholder="Paste your link here" size="40">
 			  <input id = "submitbutton" type ="submit" value="Short it!">
@@ -18,20 +19,6 @@
 </div>
 
 <div>
-<table id="datatable" align="center">
-  <tr>
-    <th align ="left"><%= "Long URL"%></th>
-    <th align ="left"><%= "Shorten URL"%></th>
-    <th align ="left"><%= "Click Count"%></th>
-  </tr>
-  <tr>
-  <% @all_url.each do |url| %>
-    <td align = "left"><%= url.long_url %></td>
-    <td align = "left"><%= url.short_url %></td>
-    <td align = "center"><%= url.click_count%></td>
-  </tr>
-     <% end %>
- </table>
+
  </div>
 
- 

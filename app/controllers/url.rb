@@ -1,7 +1,6 @@
 get '/' do 
   @urls = Url.all
   # @count = Url.count
-  @all_url = Url.all.order(click_count: :desc).limit(10)
   erb :'static/home'
 end
 
@@ -29,6 +28,7 @@ end
 
 
 get '/urls/:id' do
+  @all_url = Url.all.order(click_count: :desc).limit(5)
   @url = Url.find_by(id: params[:id])  
   erb :'static/show'
 end

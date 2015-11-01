@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    src: url('fonts/ArchitectsDaughter.eot');
+    src: url('fonts/ArchitectsDaughter.eot') format('embedded-opentype'),
+         url('fonts/ArchitectsDaughter.woff2') format('woff2'),
+         url('fonts/ArchitectsDaughter.woff') format('woff'),
+         url('fonts/ArchitectsDaughter.ttf') format('truetype'),
+         url('fonts/ArchitectsDaughter.svg#ArchitectsDaughter') format('svg');
+}

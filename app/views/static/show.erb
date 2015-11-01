@@ -1,6 +1,24 @@
-<title>Shorty URL</title>
-<h1 align="center">Shorty URL</h1>
+<title>Short-ly</title>
+<h1 align="center">Short-ly</h1>
 
 
 <p align = "center">Your short url is: <a href="http://localhost:9393/<%=@url.short_url %>">http://localhost:9393/<%=@url.short_url%></a></p>
+
+<div>
+<table id="datatable" align="center">
+
+  <tr>
+    <th align ="center"><%= "Long URL"%></th>
+    <th align ="center"><%= "Shorten URL"%></th>
+    <th align ="center"><%= "Click Count"%></th>
+  </tr>
+  <tr>
+  <% @all_url.each do |url| %>
+    <td align = "justify" width="60%"><a href="<%=url.long_url%>"><%=url.long_url%></a></p></td>
+    <td align = "justify" width="30%"><a href="http://localhost:9393/<%=url.short_url%>">http://localhost:9393/<%=url.short_url%></a></p></td>
+    <td align = "center" width="10%"><%= url.click_count%></td>
+  </tr>
+     <% end %>
+ </table>
+ </div>
 
